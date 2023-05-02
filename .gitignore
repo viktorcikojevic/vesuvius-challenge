@@ -1,0 +1,4 @@
+kaggle-data/*
+.DS_Store
+datasets/dataset-1/train/*
+datasets/dataset-1/test/*
