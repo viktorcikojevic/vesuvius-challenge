@@ -7,6 +7,8 @@ from tqdm import tqdm
 import albumentations as A
 import argparse
 import gc
+from torch.nn.functional import avg_pool2d
+import torch
 
 
 def random_crop(volume, mask, label):
@@ -57,6 +59,32 @@ def augment(augmentation, volume, mask, label, train=True):
     v, m, l = resize_to_768(v, m, l)
     # normalize v
     v = (v - np.min(v)) / (np.max(v) - np.min(v))
+    
+    # convert to torch tensors
+    v = torch.from_numpy(v).float()
+    l = torch.from_numpy(l).float()
+    l = l.unsqueeze(-1)
+
+    # Apply 2D average pooling to the volume and label tensors
+    # Average each channel separately
+    v = v.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
+    v = avg_pool2d(v, kernel_size=4, stride=4)
+    v = v.permute(1, 2, 0)  # Permute dimensions back
+    
+    l = l.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
+    l = avg_pool2d(l, kernel_size=4, stride=4)
+    l = l.permute(1, 2, 0)  # Permute dimensions back
+    
+    # convert to numpy arrays
+    v = v.numpy()
+    l = l.numpy()
+    
+    idx_1 = np.random.randint(0, 20)
+    idx_2 = np.random.randint(20, 35)
+    idx_3 = np.random.randint(35, 64)
+    indices = [idx_1, idx_2, idx_3]
+    v = v[:, :, indices]
+    
     return v, m, l
 
 def load_volume(surface_volume_path):
@@ -69,7 +97,7 @@ def load_volume(surface_volume_path):
     img = np.transpose(img, (1, 2, 0))
     return img
 
-def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000, n_augmentations_per_scroll_test=1000):
+def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000, n_augmentations_per_scroll_test=1000, mini_dataset=False):
     # Set the random seed for numpy and Albumentations
     np.random.seed(seed)
     
@@ -87,11 +115,14 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
     ], additional_targets={'label': 'mask'})
     
     
-    rand_ints = [1, 2, 3]
+    if mini_dataset:
+        rand_ints = [1]
+    else:
+        rand_ints = [1, 2, 3]
     # shuffle the list
     np.random.shuffle(rand_ints)
-    indx_train = 0
-    indx_test = 0
+    indx_train = seed * n_augmentations_per_scroll_train
+    indx_test = seed * n_augmentations_per_scroll_test
     
     # if the folders train/volume, train/label, test/volume, test/label don't exist, create them. Otherwise delete them and create them again.
     if not os.path.exists('train/volume'):
@@ -182,10 +213,11 @@ def main():
     parser.add_argument("--seed", type=int, default=42, help="Random seed value")
     parser.add_argument("--train-augm", type=int, default=10_000, help="Number of augmentations per scroll for training")
     parser.add_argument("--test-augm", type=int, default=1_000, help="Number of augmentations per scroll for testing")
+    parser.add_argument("--mini", action='store_true', help="Use to create a mini dataset for testing purposes")
     args = parser.parse_args()
 
     # Call the generate_augmented_dataset function with the provided seed value
-    generate_augmented_dataset(seed=args.seed, n_augmentations_per_scroll_train=args.train_augm, n_augmentations_per_scroll_test=args.test_augm)
+    generate_augmented_dataset(seed=args.seed, n_augmentations_per_scroll_train=args.train_augm, n_augmentations_per_scroll_test=args.test_augm, mini_dataset=args.mini)
 
 
 if __name__ == "__main__":
