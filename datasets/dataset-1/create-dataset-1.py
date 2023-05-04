@@ -79,11 +79,6 @@ def augment(augmentation, volume, mask, label, train=True):
     v = v.numpy()
     l = l.numpy()
     
-    idx_1 = np.random.randint(0, 20)
-    idx_2 = np.random.randint(20, 35)
-    idx_3 = np.random.randint(35, 64)
-    indices = [idx_1, idx_2, idx_3]
-    v = v[:, :, indices]
     
     return v, m, l
 
@@ -167,50 +162,62 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
         gc.collect()
 
         print("[INFO] Augmenting training data...")
-        for _ in tqdm(range(n_augmentations_per_scroll_train)):
+        for _ in tqdm(range(n_augmentations_per_scroll_train // 20)):
             v, m, l = augment(augmentation, volume_train, mask_train, ink_labels_train, train=True)
-            # save the augmented volume
-            fname_volume = f"train/volume/{indx_train}"
-            fname_label = f"train/label/{indx_train}"
             
-            # save the augmented volume and label as numpy arrays   
-            np.save(fname_volume, v)
-            np.save(fname_label, l)
-            
-            # save the channel 0 of the augmented volume as a png image to train/volume-png
-            v = v[:, :, 0]
-            v = (v * 255).astype(np.uint8)
-            v = Image.fromarray(v)
-            v.save(f"train/volume-png/{indx_train}.png")
-            
-            # save the channel 0 of the label
-            l = l[:, :, 0]
-            l = (l * 255).astype(np.uint8)
-            l = Image.fromarray(l)
-            l.save(f"train/label-png/{indx_train}.png")
-            
-            # save v and l
-            indx_train += 1
+            for i in range(20):
+                idx_1 = np.random.randint(0, 20)
+                idx_2 = np.random.randint(20, 35)
+                idx_3 = np.random.randint(35, 64)
+                indices = [idx_1, idx_2, idx_3]
+                v = v[:, :, indices]
+                
+                
+                # save the augmented volume
+                fname_volume = f"train/volume/{indx_train}"
+                fname_label = f"train/label/{indx_train}"
+                
+                # save the augmented volume and label as numpy arrays   
+                np.save(fname_volume, v)
+                np.save(fname_label, l)
+                
+                # save the channel 0 of the augmented volume as a png image to train/volume-png
+                v = v[:, :, 0]
+                v = (v * 255).astype(np.uint8)
+                v = Image.fromarray(v)
+                v.save(f"train/volume-png/{indx_train}.png")
+                
+                # save v and l
+                indx_train += 1
         
         print("[INFO] 'Augmenting' (cropping) test data...")
-        for _ in tqdm(range(n_augmentations_per_scroll_test)):
+        for _ in tqdm(range(n_augmentations_per_scroll_test // 20)):
             v, m, l = augment(augmentation, volume_test, mask_test, ink_labels_test, train=False)
-            # save the augmented volume
-            fname_volume = f"test/volume/{indx_test}"
-            fname_label = f"test/label/{indx_test}"
             
-            # save the augmented volume and label as numpy arrays   
-            np.save(fname_volume, v)
-            np.save(fname_label, l)
-            
-            # save the channel 0 of the augmented volume as a png image to train/volume-png
-            v = v[:, :, 0]
-            v = (v * 255).astype(np.uint8)
-            v = Image.fromarray(v)
-            v.save(f"test/volume-png/{indx_test}.png")
-            
-            # save v and l
-            indx_test += 1
+            for i in range(20):
+                idx_1 = np.random.randint(0, 20)
+                idx_2 = np.random.randint(20, 35)
+                idx_3 = np.random.randint(35, 64)
+                indices = [idx_1, idx_2, idx_3]
+                v = v[:, :, indices]
+                
+                
+                # save the augmented volume
+                fname_volume = f"test/volume/{indx_test}"
+                fname_label = f"test/label/{indx_test}"
+                
+                # save the augmented volume and label as numpy arrays   
+                np.save(fname_volume, v)
+                np.save(fname_label, l)
+                
+                # save the channel 0 of the augmented volume as a png image to train/volume-png
+                v = v[:, :, 0]
+                v = (v * 255).astype(np.uint8)
+                v = Image.fromarray(v)
+                v.save(f"test/volume-png/{indx_test}.png")
+                
+                # save v and l
+                indx_test += 1
 
         
     
