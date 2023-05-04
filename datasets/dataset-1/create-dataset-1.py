@@ -133,6 +133,8 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
         os.makedirs('test/volume')
     if not os.path.exists('test/label'):
         os.makedirs('test/label')
+    if not os.path.exists('train/label-png'):
+        os.makedirs('train/label-png')
     if not os.path.exists('train/volume-png'):
         os.makedirs('train/volume-png')
     if not os.path.exists('test/volume-png'):
@@ -180,6 +182,12 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
             v = (v * 255).astype(np.uint8)
             v = Image.fromarray(v)
             v.save(f"train/volume-png/{indx_train}.png")
+            
+            # save the channel 0 of the label
+            l = l[:, :, 0]
+            l = (l * 255).astype(np.uint8)
+            l = Image.fromarray(l)
+            l.save(f"train/label-png/{indx_train}.png")
             
             # save v and l
             indx_train += 1
