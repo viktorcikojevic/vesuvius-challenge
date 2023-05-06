@@ -68,11 +68,11 @@ def augment(augmentation, volume, mask, label, train=True):
     # Apply 2D average pooling to the volume and label tensors
     # Average each channel separately
     v = v.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
-    v = avg_pool2d(v, kernel_size=4, stride=4)
+    v = avg_pool2d(v, kernel_size=2, stride=2)
     v = v.permute(1, 2, 0)  # Permute dimensions back
     
     l = l.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
-    l = avg_pool2d(l, kernel_size=4, stride=4)
+    l = avg_pool2d(l, kernel_size=2, stride=2)
     l = l.permute(1, 2, 0)  # Permute dimensions back
     
     # convert to numpy arrays
@@ -164,14 +164,14 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
         gc.collect()
 
         print("[INFO] Augmenting training data...")
-        for _ in tqdm(range(n_augmentations_per_scroll_train // 20)):
+        for _ in tqdm(range(n_augmentations_per_scroll_train // 10)):
             v_og, m, l_og = augment(augmentation, volume_train, mask_train, ink_labels_train, train=True)
             
-            for i in range(20):
-                idx_1 = np.random.randint(0, 20)
-                idx_2 = np.random.randint(20, 35)
-                idx_3 = np.random.randint(35, 64)
-                indices = [idx_1, idx_2, idx_3]
+            for i in range(10):
+                # take 16 random integer between 0 and 64, without replacement
+                indices = np.random.choice(64, 16, replace=False)
+                indices = np.sort(indices)
+                
                 v = v_og[:, :, indices]
                 l = l_og
                 
@@ -199,14 +199,14 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
                 indx_train += 1
         
         print("[INFO] 'Augmenting' (cropping) test data...")
-        for _ in tqdm(range(n_augmentations_per_scroll_test // 20)):
+        for _ in tqdm(range(n_augmentations_per_scroll_test // 10)):
             v_og, m, l_og = augment(augmentation, volume_test, mask_test, ink_labels_test, train=False)
             
-            for i in range(20):
-                idx_1 = np.random.randint(0, 20)
-                idx_2 = np.random.randint(20, 35)
-                idx_3 = np.random.randint(35, 64)
-                indices = [idx_1, idx_2, idx_3]
+            for i in range(10):
+                # take 16 random integer between 0 and 64, without replacement
+                indices = np.random.choice(64, 16, replace=False)
+                indices = np.sort(indices)
+                
                 v = v_og[:, :, indices]
                 l = l_og
                 

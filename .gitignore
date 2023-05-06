@@ -2,3 +2,5 @@ kaggle-data/*
 .DS_Store
 datasets/dataset-1/train/*
 datasets/dataset-1/test/*
+*__pycache__*
+*models/model-2/experiments/overfit-on-batch/models/*
