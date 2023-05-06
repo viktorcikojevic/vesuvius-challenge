@@ -130,6 +130,8 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
         os.makedirs('test/label')
     if not os.path.exists('train/label-png'):
         os.makedirs('train/label-png')
+    if not os.path.exists('test/label-png'):
+        os.makedirs('test/label-png')
     if not os.path.exists('train/volume-png'):
         os.makedirs('train/volume-png')
     if not os.path.exists('test/volume-png'):
@@ -163,14 +165,16 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
 
         print("[INFO] Augmenting training data...")
         for _ in tqdm(range(n_augmentations_per_scroll_train // 20)):
-            v, m, l = augment(augmentation, volume_train, mask_train, ink_labels_train, train=True)
+            v_og, m, l_og = augment(augmentation, volume_train, mask_train, ink_labels_train, train=True)
             
             for i in range(20):
                 idx_1 = np.random.randint(0, 20)
                 idx_2 = np.random.randint(20, 35)
                 idx_3 = np.random.randint(35, 64)
                 indices = [idx_1, idx_2, idx_3]
-                v = v[:, :, indices]
+                v = v_og[:, :, indices]
+                l = l_og
+                
                 
                 
                 # save the augmented volume
@@ -187,19 +191,24 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
                 v = Image.fromarray(v)
                 v.save(f"train/volume-png/{indx_train}.png")
                 
+                l = (l[:, :, 0] * 255).astype(np.uint8)
+                l = Image.fromarray(l)
+                l.save(f"train/label-png/{indx_train}.png")
+                
                 # save v and l
                 indx_train += 1
         
         print("[INFO] 'Augmenting' (cropping) test data...")
         for _ in tqdm(range(n_augmentations_per_scroll_test // 20)):
-            v, m, l = augment(augmentation, volume_test, mask_test, ink_labels_test, train=False)
+            v_og, m, l_og = augment(augmentation, volume_test, mask_test, ink_labels_test, train=False)
             
             for i in range(20):
                 idx_1 = np.random.randint(0, 20)
                 idx_2 = np.random.randint(20, 35)
                 idx_3 = np.random.randint(35, 64)
                 indices = [idx_1, idx_2, idx_3]
-                v = v[:, :, indices]
+                v = v_og[:, :, indices]
+                l = l_og
                 
                 
                 # save the augmented volume
@@ -215,6 +224,10 @@ def generate_augmented_dataset(seed=42, n_augmentations_per_scroll_train=10_000,
                 v = (v * 255).astype(np.uint8)
                 v = Image.fromarray(v)
                 v.save(f"test/volume-png/{indx_test}.png")
+                
+                l = (l[:, :, 0] * 255).astype(np.uint8)
+                l = Image.fromarray(l)
+                l.save(f"test/label-png/{indx_test}.png")
                 
                 # save v and l
                 indx_test += 1
