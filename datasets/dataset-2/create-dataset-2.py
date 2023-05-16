@@ -14,7 +14,7 @@ import torch
 def random_crop(volume, mask, label):
     # Note: image_data_format is 'channel_last'
     # take random number between 512 and 1024
-    crop_size = np.random.randint(512, 1024)
+    crop_size = np.random.randint(768, 1024)
     height, width = volume.shape[:-1]
     dx = crop_size
     dy = crop_size
@@ -59,24 +59,24 @@ def augment(augmentation, volume, mask, label, augment_train=True):
     # normalize v
     v = (v - np.min(v)) / (np.max(v) - np.min(v))
     
-    # convert to torch tensors
-    v = torch.from_numpy(v).float()
-    l = torch.from_numpy(l).float()
-    l = l.unsqueeze(-1)
+    # # convert to torch tensors
+    # v = torch.from_numpy(v).float()
+    # l = torch.from_numpy(l).float()
+    # l = l.unsqueeze(-1)
 
-    # Apply 2D average pooling to the volume and label tensors
-    # Average each channel separately
-    v = v.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
-    v = avg_pool2d(v, kernel_size=2, stride=2)
-    v = v.permute(1, 2, 0)  # Permute dimensions back
+    # # Apply 2D average pooling to the volume and label tensors
+    # # Average each channel separately
+    # v = v.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
+    # v = avg_pool2d(v, kernel_size=2, stride=2)
+    # v = v.permute(1, 2, 0)  # Permute dimensions back
     
-    l = l.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
-    l = avg_pool2d(l, kernel_size=2, stride=2)
-    l = l.permute(1, 2, 0)  # Permute dimensions back
+    # l = l.permute(2, 0, 1)  # Permute dimensions for avg_pool2d
+    # l = avg_pool2d(l, kernel_size=2, stride=2)
+    # l = l.permute(1, 2, 0)  # Permute dimensions back
     
-    # convert to numpy arrays
-    v = v.numpy()
-    l = l.numpy()
+    # # convert to numpy arrays
+    # v = v.numpy()
+    # l = l.numpy()
     
     
     return v, m, l
