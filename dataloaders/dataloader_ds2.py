@@ -42,7 +42,7 @@ class ImageSegmentationDataset(Dataset):
                 volume = np.load(volume_image)
                 label = np.load(label_image)
                 
-                if volume.shape != (384,384,16) or label.shape != (384,384, 1):
+                if volume.shape != (768,768,16) or label.shape != (768,768):
                     print(f"Skipping {volume_image} and {label_image} because of wrong shape: {volume.shape} and {label.shape}")
                     continue
             except:

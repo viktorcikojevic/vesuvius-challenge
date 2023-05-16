@@ -20,16 +20,16 @@ class UNet(nn.Module):
         output = (output > 0.5).float()
         
         # Calculate the precision and recall
-        tp = torch.sum(output * target)
-        fp = torch.sum(output * (1 - target))
-        fn = torch.sum((1 - output) * target)
+        tp = torch.sum(output * target, dim=-1)
+        fp = torch.sum(output * (1 - target), dim=-1)
+        fn = torch.sum((1 - output) * target, dim=-1)
         precision = tp / (tp + fp + 1e-7)
         recall = tp / (tp + fn + 1e-7)
         
         # Calculate the F0.5 score
         beta = 0.5
         f0point5 = (1 + beta**2) * precision * recall / (beta**2 * precision + recall + 1e-7)
-        return f0point5
+        return f0point5.mean()
     
     def forward(self, x, targets=None):
         x = self.unet(x)
@@ -66,10 +66,11 @@ class UNet(nn.Module):
             accuracy = (predictions_flat == targets).float().mean()
             
             # Calculate the precision
-            tp = torch.sum(predictions_flat * targets)   
-            fp = torch.sum(predictions_flat * (1 - targets))
-            fn = torch.sum((1 - predictions_flat) * targets)
+            tp = torch.sum(predictions_flat * targets, dim=-1)   
+            fp = torch.sum(predictions_flat * (1 - targets), dim=-1)
+            fn = torch.sum((1 - predictions_flat) * targets, dim=-1)
             precision = tp / (tp + fp + 1e-7)
+            precision = precision.mean()
             
             # Calculate F0.5 score
             f0point5 = self.f0point5_score(predictions_flat, targets) 

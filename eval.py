@@ -2,7 +2,7 @@ import torch
 import numpy as np
 
 @torch.no_grad()
-def evaluate(model, dataloader, eval_steps):
+def evaluate(model, dataloader, eval_steps, device):
     # Makes average of all the metrics across eval_steps batches
     
     # Set model to eval mode
@@ -19,6 +19,10 @@ def evaluate(model, dataloader, eval_steps):
     for eval_step in range(eval_steps):
         batch = next(iter(dataloader))
         images, labels = batch['image'], batch['targets']
+        # send to device
+        images = images.to(device)
+        labels = labels.to(device)
+        
         images = images.permute(0, 3, 1, 2)
         out = model(images, labels)
         

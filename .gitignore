@@ -2,5 +2,12 @@ kaggle-data/*
 .DS_Store
 datasets/dataset-1/train/*
 datasets/dataset-1/test/*
+datasets/dataset-2/train/*
+datasets/dataset-2/test/*
 *__pycache__*
 *models/model-2/experiments/overfit-on-batch/models/*
+experiments/model-baseline/models/*
+experiments/model-small/models/*
+experiments/model-init_features-64/models/*
+experiments/2.5d-segmentaion-baseline-[training]/exp-2/vesuvius/vesuvius_2d_slide_exp002/vesuvius-models/*
+experiments/2.5d-segmentaion-baseline-[training]/exp-1/vesuvius/vesuvius_2d_slide_exp002/vesuvius-models/*
