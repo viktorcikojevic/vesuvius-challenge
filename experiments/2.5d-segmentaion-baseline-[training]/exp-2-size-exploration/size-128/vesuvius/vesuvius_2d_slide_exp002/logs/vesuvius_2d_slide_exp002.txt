@@ -1,0 +1,14 @@
+
+
+-------- exp_info -----------------
+best_th: 0.3, fbeta: 0.34015219708593075
+Epoch 1 - avg_train_loss: 0.4599  avg_val_loss: 0.3157  time: 49s
+Epoch 1 - avgScore: 0.3402
+Epoch 1 - Save Best Score: 0.3402 Model
+Epoch 1 - Save Best Loss: 0.3157 Model
+
+
+-------- exp_info -----------------
+
+
+-------- exp_info -----------------
