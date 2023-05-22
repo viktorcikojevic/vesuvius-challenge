@@ -1,0 +1,31 @@
+_IncompatibleKeys(missing_keys=[], unexpected_keys=['fc.weight', 'fc.bias'])
+Threshold : 0.20	FBeta : 0.133274
+Threshold : 0.25	FBeta : 0.139369
+Threshold : 0.30	FBeta : 0.197262
+Threshold : 0.35	FBeta : 0.221359
+Threshold : 0.40	FBeta : 0.229787
+Threshold : 0.45	FBeta : 0.238807
+Threshold : 0.50	FBeta : 0.244686
+Threshold : 0.55	FBeta : 0.218323
+Threshold : 0.60	FBeta : 0.090867
+
+Threshold : 0.20	FBeta : 0.199395
+Threshold : 0.25	FBeta : 0.226694
+Threshold : 0.30	FBeta : 0.233806
+Threshold : 0.35	FBeta : 0.238758
+Threshold : 0.40	FBeta : 0.258917
+Threshold : 0.45	FBeta : 0.286761
+Threshold : 0.50	FBeta : 0.300276
+Threshold : 0.55	FBeta : 0.193384
+Threshold : 0.60	FBeta : 0.021243
+
+Threshold : 0.20	FBeta : 0.226126
+Threshold : 0.25	FBeta : 0.244658
+Threshold : 0.30	FBeta : 0.271962
+Threshold : 0.35	FBeta : 0.285720
+Threshold : 0.40	FBeta : 0.254130
+Threshold : 0.45	FBeta : 0.185326
+Threshold : 0.50	FBeta : 0.120033
+Threshold : 0.55	FBeta : 0.060470
+Threshold : 0.60	FBeta : 0.016810
+
