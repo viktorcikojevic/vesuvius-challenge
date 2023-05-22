@@ -13,3 +13,4 @@ experiments/2.5d-segmentaion-baseline-[training]/exp-2/vesuvius/vesuvius_2d_slid
 experiments/2.5d-segmentaion-baseline-[training]/exp-1/vesuvius/vesuvius_2d_slide_exp002/vesuvius-models/*
 *vesuvius-models*
 *.pth*
+*.pt*
