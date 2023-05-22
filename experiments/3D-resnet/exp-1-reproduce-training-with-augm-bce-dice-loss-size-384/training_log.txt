@@ -225,19 +225,3 @@ INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5201
 INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5192
 INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5195
 INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5199
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
-WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
