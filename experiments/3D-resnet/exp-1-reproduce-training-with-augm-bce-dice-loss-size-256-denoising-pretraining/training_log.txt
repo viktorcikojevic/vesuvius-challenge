@@ -1,0 +1,449 @@
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.3349
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.4337
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.5420
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.5790
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6075
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6276
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6443
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6471
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6522
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6571
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6646
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6653
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6671
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6694
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6699
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6718
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6746
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6770
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6789
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6835
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6843
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6857
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6863
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6853
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6871
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6874
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6853
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6837
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6843
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6822
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6810
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6795
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6788
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6776
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6778
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6772
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6766
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6766
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6747
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6735
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6725
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6712
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6698
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6698
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6690
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6688
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6676
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6671
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6660
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6656
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6655
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6648
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6635
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6627
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6617
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6603
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6589
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6582
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6568
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6560
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6555
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.89E-05  Loss: 0.6555
+INFO:root:Val Loss: 2.4946
+INFO:root:Val Loss: 2.0117
+INFO:root:Val Loss: 1.7381
+INFO:root:Val Loss: 1.6992
+INFO:root:Val Loss: 1.5498
+INFO:root:Val Loss: 1.4532
+INFO:root:Val Loss: 1.4106
+INFO:root:Val Loss: 1.3440
+INFO:root:Val Loss: 1.3420
+INFO:root:Val Loss: 1.3445
+INFO:root:Val Loss: 1.3353
+INFO:root:Val Loss: 1.3691
+INFO:root:Val Loss: 1.3717
+INFO:root:Val Loss: 1.3652
+INFO:root:Val Loss: 1.3995
+INFO:root:Val Loss: 1.3962
+INFO:root:Val Loss: 1.3870
+INFO:root:Val Loss: 1.4122
+INFO:root:Val Loss: 1.4077
+INFO:root:Val Loss: 1.4011
+INFO:root:Val Loss: 1.4217
+INFO:root:Val Loss: 1.4130
+INFO:root:Val Loss: 1.4140
+INFO:root:Val Loss: 1.4742
+INFO:root:Threshold : 0.20	FBeta : 0.153175
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6137
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6222
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6097
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6090
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6069
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6050
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6088
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6048
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6031
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6027
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6015
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.6017
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5988
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5981
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5946
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5964
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5955
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5960
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5956
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5960
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5969
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5961
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5944
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5941
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5932
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5939
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5922
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5908
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5900
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5896
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5873
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5847
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5846
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5832
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5825
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5824
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5814
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5797
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5789
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5771
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5764
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5752
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5741
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5748
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5746
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5742
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5739
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5732
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5716
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5705
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5696
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5685
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5689
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5679
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5674
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5672
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5664
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5653
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5647
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5646
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5644
+INFO:root:Epoch 1/50  Mem : 18.5GB  LR : 9.81E-05  Loss: 0.5640
+INFO:root:Val Loss: 1.2649
+INFO:root:Val Loss: 1.0728
+INFO:root:Val Loss: 0.9874
+INFO:root:Val Loss: 0.9745
+INFO:root:Val Loss: 0.9230
+INFO:root:Val Loss: 0.8913
+INFO:root:Val Loss: 0.8742
+INFO:root:Val Loss: 0.8486
+INFO:root:Val Loss: 0.8444
+INFO:root:Val Loss: 0.8443
+INFO:root:Val Loss: 0.8399
+INFO:root:Val Loss: 0.8559
+INFO:root:Val Loss: 0.8586
+INFO:root:Val Loss: 0.8556
+INFO:root:Val Loss: 0.8704
+INFO:root:Val Loss: 0.8692
+INFO:root:Val Loss: 0.8638
+INFO:root:Val Loss: 0.8735
+INFO:root:Val Loss: 0.8730
+INFO:root:Val Loss: 0.8706
+INFO:root:Val Loss: 0.8792
+INFO:root:Val Loss: 0.8758
+INFO:root:Val Loss: 0.8749
+INFO:root:Val Loss: 0.8980
+INFO:root:Threshold : 0.20	FBeta : 0.139662
+INFO:root:Threshold : 0.25	FBeta : 0.149218
+INFO:root:Threshold : 0.30	FBeta : 0.154798
+INFO:root:Threshold : 0.35	FBeta : 0.151548
+INFO:root:Threshold : 0.40	FBeta : 0.138928
+INFO:root:Threshold : 0.45	FBeta : 0.111266
+INFO:root:Threshold : 0.50	FBeta : 0.076030
+INFO:root:Threshold : 0.55	FBeta : 0.040803
+INFO:root:Threshold : 0.60	FBeta : 0.019041
+INFO:root:Threshold : 0.65	FBeta : 0.007377
+INFO:root:Threshold : 0.70	FBeta : 0.001466
+INFO:root:Threshold : 0.75	FBeta : 0.000016
+INFO:root:Threshold : 0.80	FBeta : 0.000000
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5180
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5298
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5188
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5315
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5206
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5192
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5235
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5194
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5228
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5227
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5196
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5211
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5201
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5183
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5180
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5194
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5199
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5211
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5206
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5202
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5238
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5231
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5225
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5229
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5212
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5211
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5210
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5232
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5224
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5215
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5211
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5206
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5202
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5204
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5214
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5206
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5204
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5201
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5192
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5195
+INFO:root:Epoch 2/50  Mem : 18.5GB  LR : 9.70E-05  Loss: 0.5199
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+ERROR:asyncio:Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Kernel.poll_control_queue() running at /home/viktor/miniconda3/envs/torch-env/lib/python3.9/site-packages/ipykernel/kernelbase.py:287> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f44b5560970>()]> cb=[_chain_future.<locals>._call_set_state() at /home/viktor/miniconda3/envs/torch-env/lib/python3.9/asyncio/futures.py:391]>
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.
+WARNING:imageio:Lossy conversion from uint16 to uint8. Losing 8 bits of resolution. Convert image to uint8 prior to saving to suppress this warning.

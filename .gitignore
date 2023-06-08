@@ -14,3 +14,5 @@ experiments/2.5d-segmentaion-baseline-[training]/exp-1/vesuvius/vesuvius_2d_slid
 *vesuvius-models*
 *.pth*
 *.pt*
+external-datasets/coco/*
+external-datasets/emnist/*
