@@ -1,0 +1,38 @@
+
+
+crop_size: 256
+z_start: 16
+z_end: 18
+stride: 128 # 
+
+loss:
+  - name: "bce"
+    params:
+      weight: 0.5
+  - name: "dice"
+    params:
+      weight: 0.5
+  - name: "focal"
+    params:
+      weight: 0.0001
+
+decoder_pooling: mean
+
+model:
+  name: "resnet_3d" 
+  depth: 18
+
+report_to: []
+lr: 3e-5
+batch_size: 12
+gradient_accumulation_steps: 1
+warmup_epochs: 1
+total_epochs: 30
+eval_steps:    1 # how often to evaluate on validation set
+save_steps:    1 # how often to save model
+logging_steps: 1 # how often to log metrics 
+save_total_limit: 10
+
+# Evaluate on papyrus "eval_on"
+eval_on: 1
+eval_on_n_batches: 64 # val dataset is large, so we evaluate on a subset of it

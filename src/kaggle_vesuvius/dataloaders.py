@@ -95,7 +95,7 @@ class VesuviusDataset(Dataset):
             indices = np.array(indices)[np.array(indices) != eval_on]
         else:
             # take only index eval_on from data_dir
-            data_dir = [data_dir[eval_on]]
+            data_dir = [folder for folder in data_dir if int(folder.split("/")[-1]) == eval_on]
             indices = np.array(indices)[np.array(indices) == eval_on]
         
         print(indices)
@@ -117,12 +117,13 @@ class VesuviusDataset(Dataset):
             for y in tqdm(range(0, H-self.crop_size+1, stride)):
                 for x in range(0, W-self.crop_size+1, stride):
                     if self.mode == 'train':
-                        truth = self.fragments_zarr[fragment].label[y:y+self.crop_size, x:x+self.crop_size]
-                        # Ignore the crop if ground truth pixels contain less than 10% of the crop, only in the train modes. For training stability
-                        if np.sum(truth) / np.prod(truth.shape) > 0.2:
+                        mask = self.fragments_zarr[fragment].mask[y:y+self.crop_size, x:x+self.crop_size]
+                        # Ignore the crop if it contains less than 20% of the mask
+                        if np.sum(mask) / np.prod(mask.shape) > 0.2:
                             self.xys.append((fragment, x, y, W, H))
                     else:
                         self.xys.append((fragment, x, y, W, H))
+        print(f"Dataset created. In total, n_crops={len(self.xys)}")
         
         size = self.crop_size
         self.train_aug_list = [
@@ -208,7 +209,7 @@ class VesuviusDataset(Dataset):
         y2 = y1 + self.crop_size
         
         frag_crop = (self.fragments_zarr[fragment].volume[:, y1:y2, x1:x2] / 255.0).astype('float32') # "convert" to uint8
-        mask_crop = (self.fragments_zarr[fragment].label[y1:y2, x1:x2] / 255.0).astype('float32')
+        mask_crop = (self.fragments_zarr[fragment].label[y1:y2, x1:x2] / 255.0).astype('int32')
         
         # swap axes: [C, H, W] -> [H, W, C]
         frag_crop = np.moveaxis(frag_crop, 0, -1)
@@ -222,7 +223,6 @@ class VesuviusDataset(Dataset):
         # Apply the augmentations
         augmented = self.augmentations(image=frag_crop, mask=mask_crop)
         
-
         # Separate the image and mask
         frag_crop, mask_crop = augmented["image"], augmented["mask"]
         
@@ -238,8 +238,9 @@ class VesuviusDataset(Dataset):
         # mask_crop: [H, W] -> [1, H, W] -> [1, H_og, W_og]
         mask_crop = F.interpolate(mask_crop.unsqueeze(0).unsqueeze(0), size=original_hw, mode="nearest").squeeze()
 
+        frag_crop = frag_crop.squeeze(0)
         
         return frag_crop, mask_crop
 
     def __len__(self):
-        return len(self.xys)
+        return 10 # len(self.xys)

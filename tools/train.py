@@ -4,9 +4,13 @@ import argparse
 import json
 import yaml
 from torch.utils.data import DataLoader
+from transformers import TrainingArguments, Trainer
+import os
 
 from kaggle_vesuvius.dataloaders import VesuviusDataset
-from kaggle_vesuvius.models import Resnet3DSegModel
+from kaggle_vesuvius.model_builder import build_model
+from kaggle_vesuvius.losses import get_loss_function
+from kaggle_vesuvius.custom_transformers import VesuviusDataCollator, VesuviusTrainer
 
 def main(config_path: str,
          work_dir: str,
@@ -17,7 +21,6 @@ def main(config_path: str,
     
     # Print the config    
     logger.info(json.dumps(config, indent=4))
-    return
     
     
     # Create datasets and  dataloaders
@@ -27,6 +30,7 @@ def main(config_path: str,
                                           eval_on=config['eval_on'],
                                           z_start=config['z_start'],
                                           z_end=config['z_end'],
+                                          stride=config['stride'],
                                           )
     
     val_dataset = VesuviusDataset(mode='val',
@@ -35,6 +39,7 @@ def main(config_path: str,
                                           eval_on=config['eval_on'],
                                           z_start=config['z_start'],
                                           z_end=config['z_end'],
+                                          stride=config['stride'],
                                           )
     
     
@@ -53,11 +58,9 @@ def main(config_path: str,
                                 pin_memory=True, 
                                 drop_last=False)
     
-    # Define the model
-    assert config['model']['name'] in ['Resnet3DSegModel'], f"Model {config['model']['name']} not implemented"
+    # Build the model
+    model = build_model(config)
     
-    if config['model']['name'] == 'Resnet3DSegModel':
-        model = Resnet3DSegModel(resnet_depth=config['model']['depth'])
         
     # Print number of millions of parameters
     num_params = sum(p.numel() for p in model.parameters()) / 1e6
@@ -66,7 +69,8 @@ def main(config_path: str,
     num_trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad) / 1e6
     logger.info(f"Number of millions of trainable parameters: {num_trainable_params}")
     # send model to GPU
-    # model = model.cuda()
+    model = model.cuda()
+    
     
     
     # Get the criterion
@@ -74,42 +78,46 @@ def main(config_path: str,
     criterion = get_loss_function(loss_configs)
     
     
-    # Set training arguments
+    # Prepare training arguments
     warmup_epochs = config["warmup_epochs"]
     total_epochs = config["total_epochs"]
     warmup_ratio = warmup_epochs / total_epochs
+    model_name = config["model"]["name"]
+    model_output_dir = os.path.join(work_dir, f"{model_name}-{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}")
+    if not os.path.exists(model_output_dir):
+        os.makedirs(model_output_dir)
     training_args = TrainingArguments(
         metric_for_best_model="fbeta",
         lr_scheduler_type="cosine",
         greater_is_better=True,
         warmup_ratio=warmup_ratio,
         learning_rate=float(config["lr"]),
-        per_device_train_batch_size=1,
+        per_device_train_batch_size=config["batch_size"],
         load_best_model_at_end=False,
         evaluation_strategy="steps",
         save_strategy="steps",
-        eval_steps=50,
-        save_steps=50,
-        logging_steps=50,
-        per_device_eval_batch_size=2,
+        eval_steps=config["eval_steps"],
+        save_steps=config["save_steps"],
+        logging_steps=config["logging_steps"],
+        per_device_eval_batch_size=config["batch_size"],
         num_train_epochs=total_epochs,
         save_total_limit=config["save_total_limit"] if "save_total_limit" in config else 10,
         report_to=config["report_to"],
         output_dir=str(model_output_dir),
-        gradient_accumulation_steps=config["gradient_accumulation_steps"],
+        gradient_accumulation_steps=config["gradient_accumulation_steps"] if "gradient_accumulation_steps" in config else 1,
     )
     
-    # Initialize the callback
-    save_best_threshold_callback = SaveBestThresholdCallback()
+
 
     # Initialize Trainer
-    trainer = Trainer(
+    trainer = VesuviusTrainer(
         model=model,
         args=training_args,
-        train_dataset=train_loader,
-        eval_dataset=val_loader,
-        compute_metrics=compute_fbeta_score,
-        callbacks=[save_best_threshold_callback]
+        train_dataset=train_dataset,
+        eval_dataset=val_dataset,
+        data_collator=VesuviusDataCollator(),
+        criterion=criterion,
+        eval_on_n_batches=config["eval_on_n_batches"],
     )
     
     # Perform training

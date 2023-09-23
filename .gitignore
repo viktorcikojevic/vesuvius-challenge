@@ -3,6 +3,7 @@ data/kaggle-data/*
 *.pth*
 *.pt*
 __pycache__/
-__init__.py
 *.pyc*
-experiments-DEPRECATED/*
+DEPRECATED*
+IGNORE_ME*
+*checkpoint*

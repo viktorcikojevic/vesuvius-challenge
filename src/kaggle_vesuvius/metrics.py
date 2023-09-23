@@ -19,23 +19,21 @@ def fbeta_score(preds, targets, threshold, apply_sigmoid=False, beta=0.5, smooth
     return dice
 
 
-def compute_fbeta_score(p):
-    predictions, labels = p
-    predictions = torch.tensor(predictions)
-    labels = torch.tensor(labels)
+# def compute_fbeta_score(eval_pred):
+#     print(eval_pred)
     
-    thresholds = np.linspace(0., 1.0, 0.01)
-    
-    # compute fbeta score for each threshold
-    fbeta = []
-    for threshold in thresholds:
-        fbeta.append(fbeta_score(predictions, labels, threshold=threshold, apply_sigmoid=True))
-    
-    # return the best fbeta score and the corresponding threshold
-    best_fbeta = np.max(fbeta)
-    best_threshold = thresholds[np.argmax(fbeta)]
-    
-    return {
-        'fbeta': best_fbeta,
-        'threshold': best_threshold
-    }
+
+#     thresholds = np.linspace(0, 1, 100)
+
+#     fbeta_scores = []
+#     for threshold in thresholds:
+#         fbeta = fbeta_score(preds, targets, apply_sigmoid=False, threshold=threshold)
+#         fbeta_scores.append(fbeta)
+
+#     best_fbeta = np.max(fbeta_scores)
+#     best_threshold = thresholds[np.argmax(fbeta_scores)]
+
+#     return {
+#         'fbeta': best_fbeta,
+#         'threshold': best_threshold
+#     }

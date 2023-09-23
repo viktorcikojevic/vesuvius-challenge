@@ -34,7 +34,7 @@ def get_loss_function(loss_configs):
     def criterion(y_pred, y_true):
         loss = 0.0
         for loss_fn, weight in zip(losses, weights):
-            loss += weight * loss_fn(y_pred, y_true)
+            loss += weight * loss_fn(y_pred.squeeze(), y_true.squeeze())
         return loss
     
     return criterion
