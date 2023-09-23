@@ -1,0 +1,29 @@
+
+
+crop_size: 256
+z_start: 8
+z_end: 12
+stride: 128 # 
+
+loss:
+  - name: "bce"
+    params:
+      weight: 0.5
+  - name: "dice"
+    params:
+      weight: 0.5
+
+model:
+  name: "Resnet3DSegModel" 
+  depth: 18
+
+report_to: []
+lr: 3e-6
+batch_size: 4
+gradient_accumulation_steps: 1
+warmup_epochs: 0
+total_epochs: 300
+save_total_limit: 10
+
+# Evaluate on papyrus "eval_on"
+eval_on: 1

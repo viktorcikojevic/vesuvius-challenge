@@ -225,3 +225,44 @@ def generate_resnet_model(model_depth, **kwargs):
         model = ResNet(Bottleneck, [3, 24, 36, 3], get_inplanes(), **kwargs)
 
     return model
+
+
+
+
+class Resnet3DDecoder(nn.Module):
+    def __init__(self, encoder_dims, upscale):
+        super().__init__()
+        self.convs = nn.ModuleList([
+            nn.Sequential(
+                nn.Conv2d(encoder_dims[i]+encoder_dims[i-1], encoder_dims[i-1], 3, 1, 1, bias=False),
+                nn.BatchNorm2d(encoder_dims[i-1]),
+                nn.ReLU(inplace=True)
+            ) for i in range(1, len(encoder_dims))])
+
+        self.logit = nn.Conv2d(encoder_dims[0], 1, 1, 1, 0)
+        self.up = nn.Upsample(scale_factor=upscale, mode="bilinear")
+
+    def forward(self, feature_maps):
+        for i in range(len(feature_maps)-1, 0, -1):
+            f_up = F.interpolate(feature_maps[i], scale_factor=2, mode="bilinear")
+            f = torch.cat([feature_maps[i-1], f_up], dim=1) #  Concatenate the upsampled feature map with the shallower feature map
+            f_down = self.convs[i-1](f)
+            feature_maps[i-1] = f_down
+
+        x = self.logit(feature_maps[0])
+        mask = self.up(x)
+        return mask
+
+
+class Resnet3DSegModel(nn.Module):
+    def __init__(self,resnet_depth,  **kwargs):
+        super().__init__()
+        self.encoder = generate_resnet_model(model_depth=resnet_depth, n_input_channels=1)
+        self.decoder = Resnet3DDecoder(encoder_dims=[64, 128, 256, 512], upscale=4)
+        
+    def forward(self, x):
+        feat_maps = self.encoder(x) # returns a list of feature maps
+        feat_maps_pooled = [torch.max(f, dim=2) for f in feat_maps]
+        pred_mask = self.decoder(feat_maps_pooled)
+        return pred_mask
+    
