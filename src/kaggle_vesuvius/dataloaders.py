@@ -67,6 +67,9 @@ class VesuviusDataset(Dataset):
             # Write the TIFF data to the Zarr array
             volume[i, :, :] = tif_data
 
+        # save zarr file
+
+        
         return root
 
 
@@ -119,28 +122,29 @@ class VesuviusDataset(Dataset):
                     if self.mode == 'train':
                         mask = self.fragments_zarr[fragment].mask[y:y+self.crop_size, x:x+self.crop_size]
                         # Ignore the crop if it contains less than 20% of the mask
-                        if np.sum(mask) / np.prod(mask.shape) > 0.2:
+                        if np.sum(mask/255) / np.prod(mask.shape) > 0.2:
                             self.xys.append((fragment, x, y, W, H))
                     else:
                         self.xys.append((fragment, x, y, W, H))
+        
+        # shuffle the data if in train mode
+        if self.mode == 'train':
+            np.random.shuffle(self.xys)
+        
         print(f"Dataset created. In total, n_crops={len(self.xys)}")
         
         size = self.crop_size
         self.train_aug_list = [
-                A.Resize(size, size, p=1.0),
                 A.HorizontalFlip(p=0.5),
                 A.VerticalFlip(p=0.5),
-                
-                A.RandomBrightnessContrast(p=0.2),
-                A.CoarseDropout(max_holes=8, 
-                                max_width=int(self.crop_size * 0.1), 
-                                max_height=int(self.crop_size * 0.1), 
-                                mask_fill_value=0, p=0.5),
-                
-                A.Rotate(limit=90, p=0.9), 
-                
-                # A.Cutout(max_h_size=int(self.crop_size * 0.2),
-                #          max_w_size=int(self.crop_size * 0.2), num_holes=1, p=1.0),
+                A.RandomBrightnessContrast(p=0.75),
+                A.ShiftScaleRotate(p=0.75),
+                A.OneOf([
+                        A.GaussNoise(var_limit=[10, 50]),
+                        A.GaussianBlur(),
+                        A.MotionBlur(),
+                        ], p=0.4),
+                A.GridDistortion(num_steps=5, distort_limit=0.3, p=0.5),
                 A.Normalize(
                     mean= [0] * n_channels,
                     std= [1] * n_channels
@@ -153,7 +157,6 @@ class VesuviusDataset(Dataset):
             self.augmentations = A.Compose(self.train_aug_list)
         else:
             self.augmentations = A.Compose([
-                A.Resize(size, size, p=1.0),
                 A.Normalize(
                     mean= [0] * n_channels,
                     std= [1] * n_channels
@@ -208,39 +211,39 @@ class VesuviusDataset(Dataset):
         x2 = x1 + self.crop_size
         y2 = y1 + self.crop_size
         
-        frag_crop = (self.fragments_zarr[fragment].volume[:, y1:y2, x1:x2] / 255.0).astype('float32') # "convert" to uint8
-        mask_crop = (self.fragments_zarr[fragment].label[y1:y2, x1:x2] / 255.0).astype('int32')
+        frag_crop = (self.fragments_zarr[fragment].volume[:, y1:y2, x1:x2] / (256)**2 * 255).astype('uint8') # range 0-255
+        if self.mode in ['train', 'test']:
+            mask_crop = self.fragments_zarr[fragment].label[y1:y2, x1:x2] # range 0-255
         
         # swap axes: [C, H, W] -> [H, W, C]
         frag_crop = np.moveaxis(frag_crop, 0, -1)
         
-        original_hw = frag_crop.shape[:2]
-        
-        if original_hw[0] == 0 or original_hw[1] == 0:
-            raise ValueError(f"original_hw is {original_hw}")
-        
         
         # Apply the augmentations
-        augmented = self.augmentations(image=frag_crop, mask=mask_crop)
+        if self.mode in ['train', 'test']:
+            augmented = self.augmentations(image=frag_crop, mask=mask_crop)
+        else:
+            augmented = self.augmentations(image=frag_crop)
         
         # Separate the image and mask
-        frag_crop, mask_crop = augmented["image"], augmented["mask"]
+        if self.mode in ['train', 'test']:
+            frag_crop, mask_crop = augmented["image"], augmented["mask"]
+        else:
+            frag_crop = augmented["image"]
+        
+        
         
         # # Apply cutmix
-        # if self.mode == 'train':
+        # if self.mode in ['train', 'test']:
         #     frag_crop, mask_crop = self.cut_mix(frag_crop, mask_crop)
 
-        frag_crop = frag_crop.unsqueeze(0)
-        mask_crop = mask_crop.float()
-        
-        # Resize using F interpolation back to original_hw
-        frag_crop = F.interpolate(frag_crop, size=original_hw, mode="bilinear", align_corners=False)
-        # mask_crop: [H, W] -> [1, H, W] -> [1, H_og, W_og]
-        mask_crop = F.interpolate(mask_crop.unsqueeze(0).unsqueeze(0), size=original_hw, mode="nearest").squeeze()
 
-        frag_crop = frag_crop.squeeze(0)
+        if self.mode in ['train', 'test']:
+            mask_crop = mask_crop.float() / 255.0
         
-        return frag_crop, mask_crop
+        if self.mode in ['train', 'test']:
+            return frag_crop, mask_crop
+        return frag_crop
 
     def __len__(self):
-        return 10 # len(self.xys)
+        return len(self.xys)

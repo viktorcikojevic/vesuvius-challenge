@@ -257,8 +257,7 @@ class Resnet3DSegModel(nn.Module):
         self.pooling = pooling
         assert self.pooling in ['mean', 'max']
         
-    def forward(self, **inputs):
-        x = inputs['input_ids']
+    def forward(self, x):
         feat_maps = self.encoder(x) # returns a list of feature maps
         pred_mask = self.decoder(feat_maps).squeeze() 
         
