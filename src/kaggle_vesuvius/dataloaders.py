@@ -14,7 +14,7 @@ import torch.nn.functional as F
 class VesuviusDataset(Dataset):
     
     
-    def get_zarr_file(self, folder: str, z_start: int = 0, z_end: int = None) -> zarr.core.Array:
+    def get_zarr_file(self, folder: str, z_start: int = 0, z_end: int = None, crop_size: int = 256) -> zarr.Group:
         """
         Create an in-memory Zarr store from a given folder.
         zarr .volume is uint16, mask and label are uint8
@@ -46,13 +46,14 @@ class VesuviusDataset(Dataset):
         # Get list of TIFF files and apply slicing
         tif_files = sorted([f for f in os.listdir(tif_folder) if f.endswith('.tif')])[z_start:z_end]
 
-        # Read first TIFF to determine shape and dtype
+        #  Read first TIFF to determine shape and dtype
         first_tif_path = os.path.join(tif_folder, tif_files[0])
         first_tif = tifffile.imread(first_tif_path)
 
-        # Create 3D Zarr array for volume
+        # Create 3D Zarr array for volume with chunk sizes optimized for [y1:y2, x1:x2, :]
         z_shape, y_shape, x_shape = len(tif_files), first_tif.shape[0], first_tif.shape[1]
-        volume = root.create_dataset("volume", shape=(z_shape, y_shape, x_shape), chunks=(1, y_shape, x_shape), dtype=first_tif.dtype)
+        chunk_size = (z_shape, crop_size, crop_size)  # Set y and x chunk sizes to 128; you can adjust these as needed
+        volume = root.create_dataset("volume", shape=(z_shape, y_shape, x_shape), chunks=chunk_size, dtype=first_tif.dtype)
 
         # Read each TIFF file and write to Zarr array
         print(f"Reading TIFF files from folder {tif_folder}")
@@ -67,8 +68,8 @@ class VesuviusDataset(Dataset):
             # Write the TIFF data to the Zarr array
             volume[i, :, :] = tif_data
 
-        # save zarr file
-
+        # make root read-only
+        root = zarr.open(store, mode='r')
         
         return root
 
@@ -105,7 +106,7 @@ class VesuviusDataset(Dataset):
         n_channels = z_end - z_start
         
         self.fragments_zarr = {
-            str(indx): self.get_zarr_file(folder, z_start, z_end) for indx, folder in zip(indices, data_dir)
+            str(indx): self.get_zarr_file(folder, z_start, z_end, crop_size) for indx, folder in zip(indices, data_dir)
         }
         fragments_shape = {k : v.mask.shape for k, v in self.fragments_zarr.items()}
         print(fragments_shape) # for eval_on = 1, {'0': (14830, 9506), '2': (7606, 5249)}

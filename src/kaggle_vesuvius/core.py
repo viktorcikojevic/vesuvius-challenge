@@ -144,32 +144,32 @@ class VesuviusTrainer():
             batch = next(iter(self.dataloader_train))
             batch = self.data_collator(batch)
             
-            # self.step = step
-            # loss = self.compute_loss(self.model, batch)
+            self.step = step
+            loss = self.compute_loss(self.model, batch)
             
-            # loss.backward()
-            # self.optimizer.step()
-            # self.scheduler.step()
-            # self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            self.scheduler.step()
+            self.optimizer.zero_grad()
             
-            # running_train_loss += loss.item()
+            running_train_loss += loss.item()
             
-            # if step % self.logging_steps == 0 and step > 0:
-            #     # Log metrics
-            #     metrics = self.evaluate()
+            if step % self.logging_steps == 0 and step > 0:
+                # Log metrics
+                metrics = self.evaluate()
                 
-            #     out = {
-            #         'step': step,
-            #         'train_loss': running_train_loss / self.logging_steps,
-            #     }
-            #     # combine metrics
-            #     out.update(metrics)
-            #     print(out)
-            #     self.log_metrics(out)
+                out = {
+                    'step': step,
+                    'train_loss': running_train_loss / self.logging_steps,
+                }
+                # combine metrics
+                out.update(metrics)
+                print(out)
+                self.log_metrics(out)
                 
-            #     running_train_loss = 0
+                running_train_loss = 0
                 
-            # if step % self.save_steps == 0:
-            #     # Save model checkpoint
-            #     self.save_model()
+            if step % self.save_steps == 0:
+                # Save model checkpoint
+                self.save_model()
     
