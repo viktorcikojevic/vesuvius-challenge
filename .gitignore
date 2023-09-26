@@ -1,4 +1,5 @@
 data/kaggle-data/*
+data/pretrained_models/*
 .DS_Store
 *.pth*
 *.pt*
