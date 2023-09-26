@@ -36,12 +36,34 @@ class FeatureMapsDecoder(nn.Module):
         
         feature_maps = self.perform_pooling(feature_maps)
         
+        
+        # feature_maps[i].shape torch.Size([12, 512, 8, 8])
+        # f_up.shape torch.Size([12, 512, 16, 16])
+        # f.shape torch.Size([12, 768, 16, 16])
+        # f_down.shape torch.Size([12, 256, 16, 16])
+        
+        # feature_maps[i].shape torch.Size([12, 256, 16, 16])
+        # f_up.shape torch.Size([12, 256, 32, 32])
+        # f.shape torch.Size([12, 384, 32, 32])
+        # f_down.shape torch.Size([12, 128, 32, 32])
+        
+        # feature_maps[i].shape torch.Size([12, 128, 32, 32])
+        # f_up.shape torch.Size([12, 128, 64, 64])
+        # f.shape torch.Size([12, 192, 64, 64])
+        # f_down.shape torch.Size([12, 64, 64, 64])
+        
+        
+        
+        
         for i in range(len(feature_maps)-1, 0, -1):
             f_up = F.interpolate(feature_maps[i], scale_factor=2, mode="bilinear")
             f = torch.cat([feature_maps[i-1], f_up], dim=1) #  Concatenate the upsampled feature map with the shallower feature map
             f_down = self.convs[i-1](f)
             feature_maps[i-1] = f_down
 
+        # x.shape torch.Size([12, 1, 64, 64])
+        # mask.shape torch.Size([12, 1, 256, 256])
+        
         x = self.logit(feature_maps[0])
         mask = self.up(x)
         
